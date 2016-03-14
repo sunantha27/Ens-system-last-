@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">ENS System</string>
+
+    <!--Biw-->
+    <string name="user">User :</string>
+    <string name="pass">Password :</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sing Up</string>
+
+    <!--Kao-->
+    <string name="username">ชื่อผู้ใช้ :</string>
+    <string name="password">รหัสผ่าน :</string>
+
+    <string name="password1">ยื่นยัน รหัสผ่าน :</string>
+
+    <string name="name">ชื่อ :</string>
+    <string name="surname">นามสกุล :</string>
+    <string name="gender">เพศ :</string>
+    <string name="phone">เบอร์โทรศัพท์ :</string>
+    <string name="email">อีเมล :</string>
+    <string name="female">หญิง</string>
+    <string name="male">ชาย</string>
+    <string name="userpass">Username</string>
+    <string name="passseting">ใส่ 6 ตัวอักษร</string>
+    <string name="namebox">Name</string>
+    <string name="surnamebox">Surname</string>
+    <string name="phonebox">Phone Number</string>
+    <string name="emailbox">E-Mail</string>
+
+    <string name="en_infor">Inform</string>
+    <string name="en_news">News</string>
+    <string name="en_search">Search</string>
+    <string name="en_status">Statistic</string>
+    <string name="en_call">Call</string>
+
+    <string name="th_infor">แจ้งเหตุฉุกเฉิน</string>
+    <string name="th_news">ข่าว</string>
+    <string name="th_search">ค้นหา</string>
+    <string name="th_status">สถิติ</string>
+    <string name="th_call">เบอร์ฉุกเฉิน</string>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>
