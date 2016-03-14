@@ -25,6 +25,7 @@ public class NewsAdapter extends BaseAdapter {
         this.titleStrings = titleStrings;
         this.dateStrings = dateStrings;
         this.iconStrings = iconStrings;
+
     }//Consturctor
 
 
