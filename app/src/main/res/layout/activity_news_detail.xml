@@ -7,6 +7,75 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="appewtc.masterung.enssystem.NewsDetail">
+    tools:context="appewtc.masterung.enssystem.NewsDetail"
+    android:background="@drawable/wall">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txtTitle"
+            android:textSize="@dimen/h1"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text" />
+
+        <ImageView
+            android:id="@+id/imvDetail"
+            android:layout_width="@dimen/image"
+            android:layout_height="@dimen/image"
+            android:layout_margin="15sp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txtDay"
+            android:textSize="@dimen/h2"
+            android:textColor="@color/text"
+            android:layout_gravity="right" />
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="@dimen/image"
+            android:layout_height="@dimen/scollview"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/txtDetail"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/text" />
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:id="@+id/bttDetailBack"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video"
+                android:id="@+id/bttDetailVideo"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
