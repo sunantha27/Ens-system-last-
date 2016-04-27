@@ -32,12 +32,14 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
     private TextView showNameTextView;
     private DatePicker datePicker;
     private EditText phoneEditText, detailEditText;
-    private Spinner typeSpinner;
+    private Spinner typeSpinner, districtSpinner;
     private Button addPhotoButton, addVideoButton,
             addLocationButton, updateToSQLButton;
     private String nameLoginString, dateString, phoneString, detailString,
-            typeString, photoURLString, videoURLString, latString, lngString;
+            typeString, photoURLString, videoURLString, latString, lngString ,districtString;
     private double latADouble, lngADouble;
+
+    public  String[] districtStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
         showName();
 
         typeController();
+        districtController();
 
         //Button Controller
         buttonController();
@@ -59,8 +62,46 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
 
     }   // Main Method
 
+    private void districtController() {
+
+            districtStrings = new String[11];
+            districtStrings[0] = "อำเภอเมือง";
+            districtStrings[1] = "อำเภอบางคล้า";
+            districtStrings[2] = "อำเภอบางน้ำเปรี้ยว";
+            districtStrings[3] = "อำเภอบางปะกง";
+            districtStrings[4] = "อำเภอบ้านโพธิ์";
+            districtStrings[5] = "อำเภอพนมสารคาม";
+            districtStrings[6] = "อำเภอราชสาส์น";
+            districtStrings[7] = "อำเภอสนามชัยเขต";
+            districtStrings[8] = "อำเภอแปลงยาว";
+            districtStrings[9] = "อำเภอท่าตะเกียบ";
+            districtStrings[10] = "อำเภอคลองเขื่อน";
+
+            ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1, districtStrings);
+
+            districtSpinner.setAdapter(stringArrayAdapter);
+
+            districtSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    districtString = districtStrings[i];
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    districtString = districtStrings[0];
+
+
+                }
+            });
+
+        }//districtController
+
+
     @Override
-    protected void onRestart() {
+    protected void onRestart(){
         super.onRestart();
 
         if (latADouble != 0) {
@@ -123,6 +164,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
         addVideoButton = (Button) findViewById(R.id.button9);
         addLocationButton = (Button) findViewById(R.id.button11);
         updateToSQLButton = (Button) findViewById(R.id.button5);
+        districtSpinner = (Spinner)findViewById(R.id.spinner2);
 
     }   // bindWidget
 
@@ -232,6 +274,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
                 "วันที่เกิดเหตุ = " + dateString + "\n" +
                 "เบอร์ของผู้แจ้ง = " + phoneString + "\n" +
                 "ประเภทเหตุการณ์ = " + typeString + "\n" +
+                "อำเภอ =" + districtString +"\n" +
                 "รายละเอียด = " + detailString + "\n" +
                 "ละติจุต = " + latString + "\n" +
                 "ลองจิจูต = " + lngString);
@@ -266,6 +309,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
             nameValuePairs.add(new BasicNameValuePair("Day_Inform", dateString));
             nameValuePairs.add(new BasicNameValuePair("Phone_Inform", phoneString));
             nameValuePairs.add(new BasicNameValuePair("Type_Inform", typeString));
+            nameValuePairs.add(new BasicNameValuePair("District", districtString));
             nameValuePairs.add(new BasicNameValuePair("Detail_Inform", detailString));
             nameValuePairs.add(new BasicNameValuePair("Photo_Inform", "testPhoto"));
             nameValuePairs.add(new BasicNameValuePair("Video_Inform", "testVideo"));

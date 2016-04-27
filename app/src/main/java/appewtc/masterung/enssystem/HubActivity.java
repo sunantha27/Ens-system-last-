@@ -26,8 +26,18 @@ public class HubActivity extends AppCompatActivity {
 
     }   // Main Method
 
-    public  void  clickNews(View view) {
-        Intent intent = new Intent(HubActivity.this,NewsListView.class);
+    public void clickStatic(View view) {
+        startActivity(new Intent(this, ChooseTypeGraph.class));
+    }
+
+    public void clickCall(View view) {
+        startActivity(new Intent(HubActivity.this, CallListView.class));
+    }
+
+
+
+    public void clickNews(View view) {
+        Intent intent = new Intent(HubActivity.this, NewsListView.class);
         startActivity(intent);
     }
 
@@ -36,7 +46,7 @@ public class HubActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        engImageView.setVisibility(View.INVISIBLE);
+        // engImageView.setVisibility(View.INVISIBLE);
 
     }
 
@@ -57,7 +67,7 @@ public class HubActivity extends AppCompatActivity {
         staticTextView.setText(getResources().getString(R.string.th_status));
         callTextView.setText(getResources().getString(R.string.th_call));
 
-        changeThaiEng();
+        //changeThaiEng();
 
     }   // clickTHAI
 
@@ -82,7 +92,7 @@ public class HubActivity extends AppCompatActivity {
         staticTextView.setText(getResources().getString(R.string.en_status));
         callTextView.setText(getResources().getString(R.string.en_call));
 
-        changeThaiEng();
+        //changeThaiEng();
 
     }   // clickENG
 

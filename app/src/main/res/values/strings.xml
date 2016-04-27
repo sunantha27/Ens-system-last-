@@ -39,6 +39,18 @@
     <string name="th_status">สถิติ</string>
     <string name="th_call">เบอร์ฉุกเฉิน</string>
     <string name="title_activity_maps">Map</string>
+    <string name="district">อำเภอ</string>
+
+    <string name="grap">กราฟแสดงสถิติ</string>
+
+    <string name="cat1">ไฟไหม้</string>
+    <string name="cat2">น้ำท่วม</string>
+    <string name="cat3">แผ่นดินไหว</string>
+    <string name="cat4">อุบัติเหตุ</string>
+
+
+    <string name="choose1">ประเภทอุบัติเหตุ</string>
+    <string name="choose2">แบ่งตามอำเภอ</string>
 
 
 </resources>

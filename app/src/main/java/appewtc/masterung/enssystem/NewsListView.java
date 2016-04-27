@@ -1,10 +1,12 @@
 package appewtc.masterung.enssystem;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class NewsListView extends AppCompatActivity {
@@ -22,45 +24,75 @@ public class NewsListView extends AppCompatActivity {
         //Bind Widdget
         newListView = (ListView) findViewById(R.id.listView);
 
-     //Create ListView
-        createView();
+        //create ListView
+        createListView();
+
+
+
+
+
 
 
     }//Main Method
 
-    private void createView() {
-
-        //Read All Data from SQLite
-        int intDigit = 30; //จำนวนตัวอักษรที่จะอ่านมาแสดงที่ Title
+    private void createListView() {
+        //Read All Data From SQLite
+        int intDigit = 30; // จำนวนตัวอักษรที่แสดงที่ Title
 
         SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.DATABASE_NAME,
                 MODE_PRIVATE, null);
+
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + ManageTABLE.TABLE_newsTABLE, null);
         cursor.moveToFirst();
 
-        int intCount = cursor.getCount();
-        String[] titleFullStrings = new String[intCount];
-        String[] titleShortStrings =new String[intCount];
-        String[] dateStrings = new String[intCount];
-        String[] photoNewStrings = new String[intCount];
+        final int intCount = cursor.getCount();
+        final String[] titleFullStrings = new String[intCount];
+        String[] titleShortStrings = new String[intCount];
+        final String[] dateStrings = new String[intCount];
+        final String[] photoNewsStrings = new String[intCount];
+        final String[] detailStrings = new String[intCount];
+        final String[] videoStrings = new String[intCount];
 
-        for (int i = 0; i < intCount; i++){
-                titleFullStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Title_News));
-                dateStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Day_News));
-            photoNewStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Photo_News));
-            titleShortStrings[i] = titleFullStrings[i].substring(0,intDigit);
-                cursor.moveToNext();
+
+        for (int i = 0; i < intCount; i++) {
+
+            titleFullStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Title_News));
+            dateStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Day_News));
+            photoNewsStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Photo_News));
+            detailStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Detail_News));
+            videoStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Video_News));
+
+
+            titleShortStrings[i] = titleFullStrings[i].substring(0, intDigit) + "...";
+
+
+            cursor.moveToNext();
 
         } //for
 
-             cursor.close();
+        cursor.close();
+
         NewsAdapter newsAdapter = new NewsAdapter(NewsListView.this,
-                titleShortStrings, dateStrings, photoNewStrings);
+                titleShortStrings, dateStrings, photoNewsStrings);
         newListView.setAdapter(newsAdapter);
 
+        newListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent intent = new Intent(NewsListView.this, NewsDetail.class);
+                intent.putExtra("Title", titleFullStrings[i]);
+                intent.putExtra("Image", photoNewsStrings[i]);
+                intent.putExtra("Date", dateStrings[i]);
+                intent.putExtra("Detail", detailStrings[i]);
+                intent.putExtra("Video", videoStrings[i]);
+                startActivity(intent);
+
+            } // on item click
+        });
 
 
-    } //create ListView
+    }//create ListView
 
     public void clickBackNewsList(View view) {
         finish();

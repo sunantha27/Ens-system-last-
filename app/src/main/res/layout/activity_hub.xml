@@ -118,7 +118,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView4"
-                android:src="@drawable/section5" />
+                android:src="@drawable/section5"
+                android:onClick="clickCall" />
 
         </LinearLayout>
 

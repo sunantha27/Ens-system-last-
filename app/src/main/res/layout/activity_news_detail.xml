@@ -3,79 +3,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="appewtc.masterung.enssystem.NewsDetail"
     android:background="@drawable/wall">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView4"
+        android:layout_above="@+id/linBottomNewsDeatail">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/txtTitle"
-            android:textSize="@dimen/h1"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/text" />
-
-        <ImageView
-            android:id="@+id/imvDetail"
-            android:layout_width="@dimen/image"
-            android:layout_height="@dimen/image"
-            android:layout_margin="15sp"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/txtDay"
-            android:textSize="@dimen/h2"
-            android:textColor="@color/text"
-            android:layout_gravity="right" />
-
-        <ScrollView
-            android:id="@+id/scrollView3"
-            android:layout_width="@dimen/image"
-            android:layout_height="@dimen/scollview"
-            android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linBottomNewsDeatail">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
-                android:id="@+id/txtDetail"
-                android:textSize="@dimen/h2"
+                android:id="@+id/txtTitleNewsDetail"
+                android:textSize="@dimen/h1"
+                android:layout_gravity="center_horizontal"
                 android:textColor="@color/text" />
-        </ScrollView>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true">
+            <ImageView
+                android:id="@+id/imvDetail"
+                android:layout_width="@dimen/image"
+                android:layout_height="125dp"
+                android:layout_margin="15sp"
+                android:layout_gravity="center_horizontal" />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Back"
-                android:id="@+id/bttDetailBack"
-                android:layout_weight="1" />
+                android:text="New Text"
+                android:id="@+id/txtDay"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/text"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp" />
 
-            <Button
+            <ScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/txtDetail"
+                    android:textSize="@dimen/h2"
+                    android:textColor="@color/text" />
+            </ScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="วีดีโอที่เกี่ยวข้อง"
+                android:id="@+id/textView26"
+                android:layout_marginLeft="25dp"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/text" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Video"
-                android:id="@+id/bttDetailVideo"
-                android:layout_weight="1" />
-        </LinearLayout>
+                android:id="@+id/textView27"
+                android:textSize="@dimen/h2"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/text"
+                android:clickable="true"
+                android:onClick="showVideoView" />
 
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linBottomNewsDeatail">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/bttDetailBack"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:id="@+id/bttDetailVideo"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </RelativeLayout>

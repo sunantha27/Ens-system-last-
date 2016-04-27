@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <string-array name="cat0_name">
+
+        <item>สถานีดับเพลิงเทศบาลเมืองฉะเชิงเทรา</item>
+
+
+    </string-array>
+    <string-array name="cat0_phone">
+
+        <item>038203399</item>
+
+    </string-array>
+
+    <string-array name="cat1_name">
+
+        <item>โรงพยาบาลเมืองฉะเชิงเทรา</item>
+        <item>โรงพยาบาลบ้านโพธิ์</item>
+        <item>โรงพยาบาลบางคล้า</item>
+        <item>โรงพยาบาลบางน้ำเปรี้ยว</item>
+        <item>โรงพยาบาลบางปะกง</item>
+        <item>โรงพยาบาลพนมสารคาม</item>
+        <item>โรงพยาบาลราชสาส์น</item>
+        <item>โรงพยาบาลสนามชัยเขต</item>
+        <item>โรงพยาบาลแปลงยาว</item>
+        <item>โรงพยาบาลท่าตะเกียบ</item>
+        <item>โรงพยาบาลจุฬารัตน์11</item>
+        <item>โรงพยาบาลเกษมราษฎร์ ฉะเชิงเทรา</item>
+    </string-array>
+    <string-array name="cat1_phone">
+
+        <item>038814757</item>
+        <item>038587344</item>
+        <item>038541009</item>
+        <item>038581103</item>
+        <item>038531286</item>
+        <item>038551888</item>
+        <item>038563069</item>
+        <item>038597128</item>
+        <item>038589002</item>
+        <item>038589002</item>
+        <item>038538511</item>
+
+    </string-array>
+
+
+    <string-array name="cat2_name">
+
+        <item>กู้ภัยฉะเชิงเทรา</item>
+
+    </string-array>
+
+    <string-array name="cat2_phone">
+
+        <item>038511410</item>
+
+
+    </string-array>
+
+
+    <string-array name="cat3_name">
+
+        <item>โรงพยาบาลเมืองฉะเชิงเทรา</item>
+        <item>โรงพยาบาลบ้านโพธิ์</item>
+        <item>โรงพยาบาลบางคล้า</item>
+        <item>โรงพยาบาลบางน้ำเปรี้ยว</item>
+
+
+    </string-array>
+
+
+
+    <string-array name="cat3_phone">
+
+        <item>038814757</item>
+        <item>038587344</item>
+        <item>038541009</item>
+        <item>038581103</item>
+
+
+    </string-array>
+
+
+
+
+
+    <string-array name="cat4_name">
+
+        <item>สภ.เมืองฉะเชิงเทรา</item>
+        <item>สภ.พนมสารคาม</item>
+        <item>สภ.บางคล้า</item>
+        <item>สภ.บ้านโพธิ์</item>
+        <item>สภ.บางน้ำเปรี้ยว</item>
+        <item>สภ.บางปะกง</item>
+        <item>สภ.สนามชัยเขต</item>
+        <item>สภ.แปลงยาว</item>
+        <item>สภ.ราชสาส์น</item>
+        <item>สภ.ท่าตะเกียบ</item>
+        <item>สภ.คลองเขื่อน</item>
+
+    </string-array>
+
+
+
+    <string-array name="cat4_phone">
+
+        <item>038511111</item>
+        <item>038551666</item>
+        <item>038541111</item>
+        <item>038587112</item>
+        <item>038581218</item>
+        <item>038531112</item>
+        <item>038597000</item>
+        <item>038589111</item>
+        <item>038759100</item>
+        <item>038508191</item>
+        <item>038509111</item>
+
+    </string-array>
+
+
+    <string-array name="cat5_name">
+
+        <item>สำนักงานประปาฉะเชิงเทรา</item>
+
+    </string-array>
+
+    <string-array name="cat5_phone">
+
+        <item>038511133</item>
+
+    </string-array>
+
+
+
+</resources>
